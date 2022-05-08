@@ -1,11 +1,12 @@
 import datetime
+from typing import Optional
 
 from pydantic import BaseModel
 
 
 class TaskSchema(BaseModel):
     name: str
-    completed: bool
+    completed: Optional[bool] = True
 
 
 class TaskSchemaOut(TaskSchema):
